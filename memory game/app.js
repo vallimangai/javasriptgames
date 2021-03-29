@@ -99,11 +99,13 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
         function flipCard(){
             var cardId=this.getAttribute('data-id');
-            cardsChosen.push(CardArray[cardId].name);
-            cardsChosenId.push(cardId);
-            this.setAttribute('src',CardArray[cardId].img)
-            if(cardsChosen.length===2){
-                setTimeout(checkForMatch,500)
+            if(!cardsChosenId.includes(cardId)){
+                    cardsChosen.push(CardArray[cardId].name);
+                    cardsChosenId.push(cardId);
+                    this.setAttribute('src',CardArray[cardId].img)
+                    if(cardsChosen.length===2){
+                        setTimeout(checkForMatch,100)
+                    }
             }
         }
 
