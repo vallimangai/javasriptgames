@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+}
+.grid{
+    display:flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: skyblue;
+    }
+    .grid{
+        height: 400px;
+        width:300px;
+    }
+  }
